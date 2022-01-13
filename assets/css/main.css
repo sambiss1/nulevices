@@ -1,0 +1,219 @@
+/* Importing font-awesome icons library */
+
+@import url("./all.css");
+
+/* Normalize */
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body.is-preload *,
+body.is-preload *:before,
+body.is-preload *:after {
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: montserrat;
+    background: #dbdbdb;
+    scroll-behavior: smooth;
+}
+
+
+/* Container */
+
+.container {
+    height: auto;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    background: #fff;
+}
+
+
+/* Site-header */
+
+.site-header {
+    height: 600px;
+    background: #de1205 url("../../images/background-1.png") no-repeat fixed center top;
+    background-size: contain;
+    border: 1px solid #000;
+}
+
+
+/* Header content */
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Navigation */
+
+.navigation ul {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    margin: 15px 30px 15px 0;
+}
+
+.navigation ul li {
+    list-style-type: none;
+    margin: 10px 15px;
+    font-size: 24px;
+}
+
+
+/* Navigation links */
+
+.navigation ul li a {
+    text-decoration: none;
+}
+
+
+/* First section */
+
+.site-header .first-section {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+}
+
+
+/* Second and third section */
+
+.second-section,
+.third-section {
+    text-align: center;
+    padding: 100px 50px;
+}
+
+.contact-title {
+    color: steelblue;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.were {
+    font-size: 44px;
+    margin: 10px 0;
+}
+
+hr.solid {
+    border-top: 3px solid rgb(22, 24, 156);
+    width: 100px;
+    margin: 25px auto;
+}
+
+
+/* Content 1 */
+
+.content-1 {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+}
+
+
+/* The three box */
+
+.box-1,
+.box-2,
+.box-3 {
+    height: auto;
+    border: 1px solid #dbdbdb;
+    width: 30%;
+    margin: 15px 25px;
+    padding: 35px 15px;
+}
+
+
+/* Box Icons styles */
+
+.box-1 i,
+.box-2 i,
+.box-3 i {
+    font-size: 52px;
+    color: steelblue;
+}
+
+
+/* Box Heading 3 styles */
+
+.box-1 h3,
+.box-2 h3,
+.box-3 h3 {
+    font-size: 32px;
+}
+
+
+/* Box Paragraph styles */
+
+.box-1 p,
+.box-2 p,
+.box-3 p {
+    font-size: 14px;
+}
+
+
+/* Third section only */
+
+.third-section {
+    background: #f7f7f7;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: calc(100% - 200px);
+    padding: 25px 25px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input [type=tel],
+select {
+    width: 40%;
+    margin: 10px 15px;
+    height: 50px;
+}
+
+textarea {
+    width: 80%;
+    margin: 10px 50px;
+    padding: 10px 15px;
+}
