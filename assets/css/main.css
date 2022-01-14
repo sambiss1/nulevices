@@ -64,9 +64,17 @@ body {
 
 .site-header {
     height: 600px;
-    background: #de1205 url("../../images/background-1.png") no-repeat fixed center top;
+    background: url("../../images/background-1.png") no-repeat fixed center top;
     background-size: contain;
     border: 1px solid #000;
+    z-index: 99;
+}
+
+.div-bakcgound {
+    background: #de1205;
+    height: 600px;
+    border: 1px solid #000;
+    z-index: 99;
 }
 
 
