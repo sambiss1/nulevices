@@ -8,7 +8,7 @@
     width: device-width;
 }
 
-@viewport {
+@-o-viewport {
     width: device-width;
 }
 
@@ -54,7 +54,7 @@ body {
 .container {
     height: auto;
     width: 100%;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: auto;
     background: #fff;
 }
@@ -64,16 +64,9 @@ body {
 
 .site-header {
     height: 600px;
-    background: url("../../images/background-1.png") no-repeat fixed center top;
+    background: linear-gradient(0deg, rgba(27, 26, 58, 0.3), rgba(34, 7, 95, 0.3)), url("../../images/background-1.png") no-repeat fixed center top;
     background-size: contain;
-    border: 1px solid #000;
-    z-index: 99;
-}
-
-.div-bakcgound {
-    background: #de1205;
-    height: 600px;
-    border: 1px solid #000;
+    background-blend-mode: unset;
     z-index: 99;
 }
 
@@ -106,17 +99,84 @@ body {
 
 .navigation ul li a {
     text-decoration: none;
+    color: #fff;
+}
+
+
+/* Toggle menu bar icon */
+
+.toggle-menu {
+    display: none;
 }
 
 
 /* First section */
 
 .site-header .first-section {
-    margin: auto;
+    margin: 50px 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid #000;
+    height: auto;
+}
+
+h1 {
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+
+/* Style the list */
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+}
+
+
+/* Display list items side by side */
+
+.site-logo img {
+    z-index: 0;
+}
+
+
+/* Breadcumb */
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+
+/* Add a slash symbol (/) before/behind each list item */
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "\00a0";
+}
+
+ul.breadcrumb li:first-child:after {
+    content: "\00a0\003E";
+    color: #FFF;
+}
+
+
+/* Add a color to all links inside the list */
+
+ul.breadcrumb li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Add a color on mouse-over */
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
 }
 
 
@@ -203,25 +263,321 @@ hr.solid {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    display: ms-grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
     margin: auto;
     width: calc(100% - 200px);
-    padding: 25px 25px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 input[type=text],
 input[type=email],
 input[type=tel],
-input [type=tel],
 select {
-    width: 40%;
+    width: 400px;
     margin: 10px 15px;
     height: 50px;
+    padding: 10px 15px;
 }
 
 textarea {
-    width: 80%;
-    margin: 10px 50px;
+    margin: auto;
     padding: 10px 15px;
+    height: 200px;
+    width: 840px;
+}
+
+
+/* Scroll-to-top */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.fa-arrow-circle-up {
+    font-size: 35px;
+    color: rgb(22, 24, 156);
+}
+
+
+/* Site footer */
+
+.footer {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    text-align: center;
+    background: #000323;
+}
+
+.footer-area-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.copyright-text {
+    /*/
+    
+    text-align: center;
+    */
+    color: #fff;
+}
+
+@media screen and (max-width:1200px) {
+    .navigation ul li {
+        font-size: 20px;
+    }
+    .box-1 i,
+    .box-2 i,
+    .box-3 i {
+        font-size: 44px !important;
+    }
+    /* Box Heading 3 styles */
+    .box-1 h3,
+    .box-2 h3,
+    .box-3 h3 {
+        font-size: 24px;
+    }
+    /* Box Paragraph styles */
+    .box-1 p,
+    .box-2 p,
+    .box-3 p {
+        font-size: 14px;
+    }
+    .were {
+        font-size: 32px;
+    }
+    .contact-title {
+        font-size: 16px;
+    }
+    form {
+        display: ms-grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr 1fr;
+        margin: auto;
+        width: calc(100% - 200px);
+        padding: 0;
+        box-sizing: border-box;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    select {
+        width: 300px;
+        margin: 10px 15px;
+        height: 50px;
+        padding: 10px 15px;
+    }
+    textarea {
+        margin: auto;
+        padding: 10px 15px;
+        height: 200px;
+        width: 640px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .navigation ul li {
+        font-size: 20px;
+    }
+    .box-1 i,
+    .box-2 i,
+    .box-3 i {
+        font-size: 36px !important;
+    }
+    /* Box Heading 3 styles */
+    .box-1 h3,
+    .box-2 h3,
+    .box-3 h3 {
+        font-size: 18px;
+    }
+    /* Box Paragraph styles */
+    .box-1 p,
+    .box-2 p,
+    .box-3 p {
+        font-size: 12px;
+    }
+    .were {
+        font-size: 24px;
+    }
+    .contact-title {
+        font-size: 14px;
+    }
+    form {
+        display: ms-grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr 1fr;
+        margin: auto;
+        width: calc(100% - 200px);
+        padding: 0;
+        box-sizing: border-box;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    select {
+        width: 300px;
+        margin: 10px 15px;
+        height: 50px;
+        padding: 10px 15px;
+    }
+    textarea {
+        margin: auto;
+        padding: 10px 15px;
+        height: 200px;
+        width: 640px;
+    }
+}
+
+@media screen and (max-width:920px) {
+    /* Main Menu */
+    .site-main-menu {
+        display: none;
+    }
+    /* Navigation items font-size*/
+    .navigation ul li {
+        font-size: 18px;
+    }
+    /* Toggle menu bar icon */
+    .toggle-menu {
+        display: block;
+        padding: 20px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+    /* Section 1: items font-size */
+    .box-1 i,
+    .box-2 i,
+    .box-3 i {
+        font-size: 24px !important;
+    }
+    /* Second and third*/
+    .second-section,
+    .third-section {
+        text-align: center;
+        padding: 50px 50px;
+    }
+    /* Box Heading 3 styles */
+    .box-1 h3,
+    .box-2 h3,
+    .box-3 h3 {
+        font-size: 14px;
+    }
+    /* Box Paragraph styles */
+    .box-1 p,
+    .box-2 p,
+    .box-3 p {
+        font-size: 10px;
+    }
+    .were {
+        font-size: 20px;
+    }
+    .contact-title {
+        font-size: 14px;
+    }
+    /* Contact form */
+    /* Input */
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    select {
+        width: 100%;
+        height: 30px;
+        margin: 10px 0 !important;
+    }
+    /* Textarea */
+    textarea {
+        height: 100px;
+        width: 100%;
+    }
+    /* Scroll-to-top */
+    .scroll-to-top {
+        bottom: 25px;
+        right: 25px;
+    }
+    .fa-arrow-circle-up {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    /* Container */
+    .container {
+        height: auto;
+        width: 100%;
+        margin: auto;
+        background: #fff;
+    }
+    /* Navigation items font-size*/
+    .navigation ul li {
+        font-size: 14px;
+    }
+    /* Toggle menu bar icon */
+    .toggle-menu {
+        display: block;
+        padding: 20px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+    /* Section 1: items font-size */
+    .box-1 i,
+    .box-2 i,
+    .box-3 i {
+        font-size: 24px !important;
+    }
+    /* Second and third*/
+    .second-section,
+    .third-section {
+        text-align: center;
+        padding: 50px 25px;
+    }
+    /* Box Heading 3 styles */
+    .box-1 h3,
+    .box-2 h3,
+    .box-3 h3 {
+        font-size: 14px;
+    }
+    /* Box Paragraph styles */
+    .box-1 p,
+    .box-2 p,
+    .box-3 p {
+        font-size: 10px;
+    }
+    .were {
+        font-size: 20px;
+    }
+    .contact-title {
+        font-size: 14px;
+    }
+    /* Contact form */
+    /* Input */
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    select {
+        width: 100%;
+        height: 30px;
+        margin: 10px 0 !important;
+    }
+    /* Textarea */
+    textarea {
+        height: 100px;
+        width: 100%;
+    }
+    /* Scroll-to-top */
+    .scroll-to-top {
+        bottom: 25px;
+        right: 25px;
+    }
+    .fa-arrow-circle-up {
+        font-size: 28px;
+    }
 }
