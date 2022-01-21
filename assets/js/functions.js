@@ -1,3 +1,4 @@
+<< << << < HEAD
 /* Toggle menu function */
 function togglemenu() {
     var x = document.getElementById("menu_content"),
@@ -11,13 +12,4 @@ function togglemenu() {
     } else {
 
         ul.setAttribute("style", "display: block !important");
-    }
-
-
-
-    /* Scroll to top function */
-    scrollTotop = document.getElementById("scrollToTop");
-
-    function scrollTop() {
-        window.scrollTo
     }
