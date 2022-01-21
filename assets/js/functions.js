@@ -1,4 +1,3 @@
-<< << << < HEAD
 /* Toggle menu function */
 function togglemenu() {
     var x = document.getElementById("menu_content"),
