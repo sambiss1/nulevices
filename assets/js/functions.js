@@ -13,3 +13,4 @@ function togglemenu() {
 
         ul.setAttribute("style", "display: block !important");
     }
+}
